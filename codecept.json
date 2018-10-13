@@ -1,0 +1,26 @@
+{
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://",
+      "browser": "chrome"
+    }
+  },
+  "include": {
+    "I": "./steps_file.js",
+    "mainPagePage": "./pages/mainPage.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./tests/*_test.js",
+  "timeout": 10000,
+  "name": "QA-Auto-Test-Booking"
+}

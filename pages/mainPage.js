@@ -1,0 +1,30 @@
+
+moment = require('moment');
+
+chekinDate = moment();                  //Check current date
+chekoutDate = moment().add(7, 'days');  //Check current date + 7 days
+
+const I = actor();
+
+module.exports = {
+  city: 'New York',
+  url: 'www.booking.com',
+  locators: {
+    inputSearchField: '//*[@id="ss"]',
+    buttonClickOnSearch: '//*[@class="xp__button"]',
+    noResultInPage: '//*[@class="take-control__header"]',
+    checkLocation: 'div.address > a:nth-child(2)'
+  },
+  
+  CheckInDate() {
+    I.fillField('checkin_monthday', chekinDate.format('DD')); //Pick current date
+    I.fillField('checkin_month', chekinDate.format('MM'));
+    I.fillField('checkin_year', chekinDate.format('YYYY'));
+  },
+  
+  CheckOutDate() {
+    I.fillField('checkout_monthday', chekoutDate.format('DD')); //Pick current date + 7 days
+    I.fillField('checkout_month', chekoutDate.format('MM'));
+    I.fillField('checkout_year', chekoutDate.format('YYYY'));
+  }
+}
