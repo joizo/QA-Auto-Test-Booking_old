@@ -23,6 +23,10 @@ Select on the website of the "Booking.com" page New York City and insert the cur
 **Expected Result:**
 All steps is passed
 ## Run
+Run install Selenium driver for browsers
+```
+./node_modules/.bin/selenium-standalone install
+```
 Run Selenium-standalone server
 ```
 ./node_modules/selenium-standalone/bin/selenium-standalone start
