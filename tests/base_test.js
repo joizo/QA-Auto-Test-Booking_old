@@ -3,17 +3,24 @@ let mainPage = require('../pages/mainPage');
 Feature('Base');
 
 Scenario('Test Booking', (I) => {
-    I.amOnPage(mainPage.url); // Go to the https://www.booking.com page
+    // Go to the https://www.booking.com page
+    I.amOnPage(mainPage.url);
     
-    I.fillField({xpath: mainPage.locators.inputSearchField}, mainPage.city); // Pick destination: "New York"
+    // Pick destination: "New York"
+    I.fillField({xpath: mainPage.locators.inputSearchField}, mainPage.city);
     
-    mainPage.CheckInDate(); //Pick current date
+    //Pick current date
+    mainPage.сheckInDate();
     
-    mainPage.CheckOutDate(); //Pick current date + 7 days
+    //Pick current date + 7 days
+    mainPage.сheckOutDate();
     
-    I.click(mainPage.locators.buttonClickOnSearch); // Click on button "Search"
+    // Click on button "Search"
+    I.click(mainPage.locators.buttonClickOnSearch);
     
-    I.dontSeeElement(mainPage.locators.noResultInPage); // Stop when the search result is 0  or Not see "Take charge of your search"
+    // Stop when the search result is 0  or Not see "Take charge of your search"
+    I.dontSeeElement(mainPage.locators.noResultInPage);
     
-    I.see(mainPage.city, mainPage.locators.checkLocation); // Checking whether results should contain "New York" in the location text
+    // Checking whether results should contain "New York" in the location text
+    I.see(mainPage.city, mainPage.locators.checkLocation);
 });

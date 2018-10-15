@@ -1,8 +1,10 @@
 
 moment = require('moment');
 
-chekinDate = moment();                  //Check current date
-chekoutDate = moment().add(7, 'days');  //Check current date + 7 days
+//Check current date
+chekinDate = moment();
+//Check current date + 7 days
+chekoutDate = moment().add(7, 'days');
 
 const I = actor();
 
@@ -16,14 +18,14 @@ module.exports = {
     checkLocation: 'div.address > a:nth-child(2)'
   },
   
-  CheckInDate() {
-    I.fillField('checkin_monthday', chekinDate.format('DD')); //Pick current date
+  сheckInDate() {
+    I.fillField('checkin_monthday', chekinDate.format('DD'));
     I.fillField('checkin_month', chekinDate.format('MM'));
     I.fillField('checkin_year', chekinDate.format('YYYY'));
   },
   
-  CheckOutDate() {
-    I.fillField('checkout_monthday', chekoutDate.format('DD')); //Pick current date + 7 days
+  сheckOutDate() {
+    I.fillField('checkout_monthday', chekoutDate.format('DD'));
     I.fillField('checkout_month', chekoutDate.format('MM'));
     I.fillField('checkout_year', chekoutDate.format('YYYY'));
   }
