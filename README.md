@@ -33,5 +33,5 @@ Run Selenium-standalone server
 ```
 Run Test
 ```
-npm run codecept run --steps
+npm run test1 run --steps
 ```
