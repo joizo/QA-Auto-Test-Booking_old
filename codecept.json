@@ -8,7 +8,8 @@
   },
   "include": {
     "I": "./steps_file.js",
-    "mainPagePage": "./pages/mainPage.js"
+    "mainPagePage": "./pages/mainPage.js",
+    "searchPagePage": "./pages/searchPage.js"
   },
   "mocha": {},
   "bootstrap": false,

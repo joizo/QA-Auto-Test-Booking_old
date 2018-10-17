@@ -13,9 +13,7 @@ module.exports = {
   url: 'www.booking.com',
   locators: {
     inputSearchField: '//*[@id="ss"]',
-    buttonClickOnSearch: '//*[@class="xp__button"]',
-    noResultInPage: '//*[@class="take-control__header"]',
-    checkLocation: 'div.address > a:nth-child(2)'
+    buttonClickOnSearch: '//*[@class="xp__button"]'
   },
   
   сheckInDate() {

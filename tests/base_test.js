@@ -1,8 +1,9 @@
 let mainPage = require('../pages/mainPage');
+let searchPage = require('../pages/searchPage');
 
 Feature('Base');
 
-Scenario('Test Booking', (I) => {
+Scenario('Test Booking', async (I) => {
     // Go to the https://www.booking.com page
     I.amOnPage(mainPage.url);
     
@@ -18,9 +19,16 @@ Scenario('Test Booking', (I) => {
     // Click on button "Search"
     I.click(mainPage.locators.buttonClickOnSearch);
     
-    // Stop when the search result is 0  or Not see "Take charge of your search"
-    I.dontSeeElement(mainPage.locators.noResultInPage);
+    //-------------------------------------------------
+    // Stop when the search result is 0 or Not see "Take charge of your search"
+    I.dontSeeElement(searchPage.locators.noResultInPage);
     
-    // Checking whether results should contain "New York" in the location text
-    I.see(mainPage.city, mainPage.locators.checkLocation);
+    const checkLocations = await I.grabTextFrom(searchPage.locators.checkLocation);
+    
+    checkLocations.forEach(function(checkCity) {
+       if (checkCity.indexOf('New York') == -1) {
+           I.see(searchPage.locators.noResultInPage);
+       }
+   });
+
 });

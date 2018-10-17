@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "codecept": "./node_modules/.bin/codeceptjs"
+    "test1": "./node_modules/.bin/codeceptjs"
   },
   "repository": {
     "type": "git",
