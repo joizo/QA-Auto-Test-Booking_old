@@ -4,6 +4,7 @@ Implementation of Automation Test whith site Booking.com using CodeceptJS.
 * **Browser Chrome >= 68;**
 * **JDK >= 1.8.0_144;**
 * **Node.js >= 8.9.1;**
+* **npm >= 5.5.1;**
 ## Project structure:
 **Summary:**
 Select on the website of the "Booking.com" page New York City and insert the current date of registration and the date of departure from the hotel.
