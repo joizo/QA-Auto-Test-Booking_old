@@ -1,15 +1,16 @@
 
 moment = require('moment');
 
-//Check current date
+// Check current date
 chekinDate = moment();
-//Check current date + 7 days
+// Check current date + 7 days
 chekoutDate = moment().add(7, 'days');
 
 const I = actor();
 
 module.exports = {
   city: 'New York',
+  //city: 'Tuvalu',
   url: 'www.booking.com',
   locators: {
     inputSearchField: '//*[@id="ss"]',

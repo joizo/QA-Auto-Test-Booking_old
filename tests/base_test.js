@@ -10,25 +10,19 @@ Scenario('Test Booking', async (I) => {
     // Pick destination: "New York"
     I.fillField({xpath: mainPage.locators.inputSearchField}, mainPage.city);
     
-    //Pick current date
+    // Pick current date
     mainPage.сheckInDate();
     
-    //Pick current date + 7 days
+    // Pick current date + 7 days
     mainPage.сheckOutDate();
     
     // Click on button "Search"
     I.click(mainPage.locators.buttonClickOnSearch);
-    
-    //-------------------------------------------------
-    // Stop when the search result is 0 or Not see "Take charge of your search"
-    I.dontSeeElement(searchPage.locators.noResultInPage);
-    
-    const checkLocations = await I.grabTextFrom(searchPage.locators.checkLocation);
-    
-    checkLocations.forEach(function(checkCity) {
-       if (checkCity.indexOf('New York') == -1) {
-           I.see(searchPage.locators.noResultInPage);
-       }
-   });
 
+    // Stop when the search result is 0 when see "Take charge of your search"
+    I.dontSeeElement(searchPage.locators.noResultInPage);
+    //I.seeElement(searchPage.locators.noResultInPage);
+    
+    //
+    await searchPage.searchCityInLocation();
 });
