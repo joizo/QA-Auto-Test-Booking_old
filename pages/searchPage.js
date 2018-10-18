@@ -15,11 +15,10 @@ module.exports = {
             console.log("-------------------------------");
             checkGrabLocations.forEach(function(checkGrabCity)
             {
-                if (checkGrabCity.indexOf('Gamagata') == -1) {
+                if (checkGrabCity.indexOf(mainPage.city) == -1) {
                     I.see('//*[@class="take-control__header"]');
                 }
-            console.log(checkGrabCity + " ===> " + checkGrabCity.indexOf('Gamagata'));
+            console.log(checkGrabCity + " ===> " + checkGrabCity.indexOf(mainPage.city));
             });
         }
 }
-//mainPage.city
