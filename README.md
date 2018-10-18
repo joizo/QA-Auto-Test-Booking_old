@@ -15,8 +15,8 @@ Select on the website of the "Booking.com" page New York City and insert the cur
 3) Pick current date;
 4) Pick current date + 7 days;
 5) Click on button "Search";
-6) On the  search results  page it check  whether there is  at least  1 result;
-7) Checking whether results should contain "New York" in the location text.
+6) On the search results page it check whether there is at least 1 result;
+7) Check all results are from New York on Search Page in the location text.
 
 **Expected Result:**
 All steps is passed
