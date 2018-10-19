@@ -25,13 +25,13 @@ All steps is passed
 ## Run
 Run install Selenium driver for browsers
 ```
-./node_modules/.bin/selenium-standalone install
+npm run selinstall
 ```
 Run Selenium-standalone server
 ```
-./node_modules/selenium-standalone/bin/selenium-standalone start
+npm run selstart
 ```
 Run Test
 ```
-npm run test1 run --steps
+npm run runtest
 ```

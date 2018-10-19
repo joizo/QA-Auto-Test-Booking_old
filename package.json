@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "test1": "./node_modules/.bin/codeceptjs"
+    "runtest": "./node_modules/.bin/codeceptjs run --steps",
+    "selstart": "./node_modules/selenium-standalone/bin/selenium-standalone start",
+    "selinstall": "./node_modules/.bin/selenium-standalone install"
   },
   "repository": {
     "type": "git",

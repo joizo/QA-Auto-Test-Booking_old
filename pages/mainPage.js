@@ -10,7 +10,6 @@ const I = actor();
 
 module.exports = {
   city: 'New York',
-  //city: 'Tuvalu',
   url: 'www.booking.com',
   locators: {
     inputSearchField: '//*[@id="ss"]',

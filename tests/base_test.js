@@ -21,8 +21,7 @@ Scenario('Test Booking', async (I) => {
 
     // Stop when the search result is 0 when see "Take charge of your search"
     I.dontSeeElement(searchPage.locators.noResultInPage);
-    //I.seeElement(searchPage.locators.noResultInPage);
     
-    //
-    await searchPage.searchCityInLocation();
+    // Check all results are from New York on Search Page in the location text
+    await searchPage.checkResultInLocation();
 });
