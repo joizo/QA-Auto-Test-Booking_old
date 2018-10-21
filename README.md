@@ -21,6 +21,10 @@ Select on the website of the "Booking.com" page New York City and insert the cur
 **Expected Result:**
 All steps is passed
 ## Run
+Install the necessary packages for test
+```
+npm install
+```
 Run install Selenium driver for browsers
 ```
 npm run selinstall
