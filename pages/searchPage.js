@@ -1,19 +1,22 @@
 let mainPage = require('../pages/mainPage');
+let assert = require('assert');
 
 const I = actor();
 
 module.exports = {
     locators: {
-        noResultInPage: '//*[@class="take-control__header"]',
-        checkLocation: 'div.address > a:nth-child(2)'
+        checkLocation: 'div.address > a:nth-child(2)',
+        noResultInPage: '//*[@class="take-control__header"]'
     },
 
-    checkResultInLocation: async () => {
-        checkGrabLocations = await I.grabTextFrom('div.address > a:nth-child(2)');
+    async checkResultInLocation() {
+        checkGrabLocations = await I.grabTextFrom(this.locators.checkLocation);
+
         checkGrabLocations.forEach(function(checkGrabCity) {
-            if (checkGrabCity.indexOf(mainPage.city) == -1) {
-                I.see('//*[@class="take-control__header"]');
-            }
+
+            //If chekCity return '-1' its false
+            let checkCity = checkGrabCity.indexOf(mainPage.city) != -1;
+            assert.equal(checkCity, true);
         });
     }
 }
