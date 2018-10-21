@@ -11,7 +11,6 @@ module.exports = {
 
     async checkResultInLocation() {
         checkGrabLocations = await I.grabTextFrom(this.locators.checkLocation);
-
         checkGrabLocations.forEach(function(checkGrabCity) {
 
             //If chekCity return '-1' its false
